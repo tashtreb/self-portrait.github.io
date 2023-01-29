@@ -1,37 +1,41 @@
 <html> <!-- Start the HTML -->
 	<head> <!-- Start the Head -->
-		<title>This is a Web Page</title> <!-- The Title of the page, start and end tag with text in-between -->
+		<title>Tash's Self Portrait</title> <!-- The Title of the page, start and end tag with text in-between -->
 	</head> <!-- End the Head, always with a "/" -->
 	<body> <!-- Start the body -->
-		This is where you would put the content of the page. <!-- This is a comment and won't display -->
-		This will be on the same line as the above.  To specify a line break, you use: <br /> <br />
-		<!-- The above text displays both a <br /> and has this funny code: <br />   That funny code allows us to display the special characters that are typically used to define a tag so that we can display them without the browser actually thinking they are the start and end of a tag.  This symbol:  < is written as < meaning "less than".  This symbol: > is written as > -->
-		This text will be a line down
-		<br /><br /> <!-- Two line breaks --> <!-- Line break tags include the closing "/" as part of them, there isn't a </br> tag. -->
-		<blink>This Text Probably Doesn't Blink</blink>
+        <h1>Video collage about me!</h1>
+		<div style="text-align:center"> 
+            <button onclick="playPause()">Play/Pause</button> 
+            <button onclick="makeBig()">Big</button>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeNormal()">Normal</button>
+            <br><br>
+            <video id="paint" width="420">
+              <source src="paint.mp4" type="video/mp4">
+            </video>
+          </div> 
 
-    <h1>Painting</h1>
-
-        <video id="paint" width="320" height="240" controls>
-        <source src="paint.mp4" type="video/mp4">
-        </video>
-
-    <h1>Beachgoing</h1>
-
-        <video id="beach" width="320" height="240" controls>
-        <source src="beach.mp4" type="video/mp4">
-        </video>
-
-    <p>Click the button to get the duration of the video, in seconds.</p>
-
-    <button onclick="myFunction()">Try it</button>
-
-    <p id="demo"></p>
         <script>
-        function myFunction() {
-            var x = document.getElementById("beach").duration;
-            document.getElementById("demo").innerHTML = x;
-        }
+            var myVideo = document.getElementById("paint"); 
+
+            function playPause() { 
+            if (myVideo.paused) 
+                myVideo.play(); 
+            else 
+                myVideo.pause(); 
+            } 
+
+            function makeBig() { 
+                myVideo.width = 560; 
+            } 
+
+            function makeSmall() { 
+                myVideo.width = 320; 
+            } 
+
+            function makeNormal() { 
+                myVideo.width = 420; 
+            } 
         </script> <!-- Place just before closing the body tag -->
 	</body> <!-- End the body -->
 </html> <!-- End the HTML -->
