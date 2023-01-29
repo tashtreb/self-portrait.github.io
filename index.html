@@ -22,5 +22,16 @@
         <source src="beach.mp4" type="video/mp4">
         </video>
 
+    <p>Click the button to get the duration of the video, in seconds.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+        <script>
+        function myFunction() {
+            var x = document.getElementById("beach").duration;
+            document.getElementById("demo").innerHTML = x;
+        }
+        </script> <!-- Place just before closing the body tag -->
 	</body> <!-- End the body -->
 </html> <!-- End the HTML -->
